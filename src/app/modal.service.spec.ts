@@ -30,9 +30,6 @@ describe('ModalService', () => {
       result: true,
     };
 
-    // as any is only used as I don't need all the properties of the Modal here
-    // I'm seperating the logic from what should be on screen, so I'm mainly testing
-    // that modal.open has been called with the correct input
     spyOn(modal, 'open').and.returnValue(mock as any);
 
     const result = await service.confirm(
